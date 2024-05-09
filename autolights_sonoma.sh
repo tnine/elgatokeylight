@@ -25,7 +25,7 @@ log stream --predicate 'process == "kernel" && composedMessage contains "ANE_Pow
   fi
 
   # If we catch a camera stop event, turn the light off.
-  if echo "$line" | grep -qE "ANE0: ANE_PowerOff_gated: clientname:zoom.us isPowered: 1"; then
+  if echo "$line" | grep -qE "ANE0: ANE_PowerOff_gated: clientname:zoom.us"; then
 	echo "Camera shut down, turn off the light."
 	echo "$line"
 	
